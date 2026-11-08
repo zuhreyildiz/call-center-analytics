@@ -12,6 +12,12 @@ import psycopg
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 SCHEMA_FILE = PROJECT_ROOT / "sql" / "03_operations_schema.sql"
 DEFAULT_CSV = PROJECT_ROOT / "data" / "synthetic_operations.csv"
+COPY_COLUMNS = (
+    "call_id, agent_name, call_date, call_time, topic, answered, resolved, "
+    "team, queue, channel, wait_seconds, talk_seconds, satisfaction_rating, "
+    "repeat_call, escalated, sentiment, sla_target_seconds, "
+    "forecast_call_volume, required_staff, actual_staff, staffing_gap"
+)
 
 
 def connection_string() -> str:
@@ -32,7 +38,7 @@ def load_csv(csv_path: Path) -> None:
 
             with csv_path.open("r", encoding="utf-8-sig", newline="") as csv_file:
                 with cursor.copy(
-                    "COPY fact_operations FROM STDIN WITH "
+                    f"COPY fact_operations ({COPY_COLUMNS}) FROM STDIN WITH "
                     "(FORMAT csv, HEADER true, DELIMITER ';', NULL '')"
                 ) as copy:
                     while chunk := csv_file.read(1024 * 1024):
