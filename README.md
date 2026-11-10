@@ -10,6 +10,14 @@ An end-to-end portfolio project for analyzing contact-center operations, agent p
 - **Customer Experience** — answered/unanswered, resolved/unresolved, and satisfaction analysis
 - **Data Quality** — completeness checks and missing satisfaction records
 
+## Live Power BI dashboard
+
+The dashboard can be viewed without signing in through Power BI's **Publish to web** feature:
+
+> **Live report link:** Add the Power BI `app.powerbi.com/view?...` link here after publishing the report.
+
+Important: Publish to web makes the report and its data publicly accessible. Use this option only with the synthetic portfolio data in this repository—never with confidential customer or company data.
+
 ## Key findings from the current dataset
 
 - 5,000 total calls
