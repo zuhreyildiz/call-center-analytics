@@ -1,4 +1,4 @@
-const DATA_URL='../data/synthetic_operations.csv';
+const DATA_URL='https://raw.githubusercontent.com/zuhreyildiz/call-center-analytics/main/data/synthetic_operations.csv';
 let rows=[], page='executive', charts=[];
 const $=s=>document.querySelector(s);
 const fmt=(n,d=0)=>Number(n||0).toLocaleString('en-US',{maximumFractionDigits:d,minimumFractionDigits:d});
