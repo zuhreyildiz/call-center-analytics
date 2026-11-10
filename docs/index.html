@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Center Operations Analytics</title>
+    <meta name="description" content="Interactive contact center operations and customer experience analytics dashboard." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand"><span class="brand-mark">◒</span><span>Contact Center<br /><b>Analytics</b></span></div>
+        <div class="sidebar-section-title">FILTERS</div>
+        <label>Team<select id="teamFilter"><option value="all">All teams</option></select></label>
+        <label>Channel<select id="channelFilter"><option value="all">All channels</option></select></label>
+        <label>Month<select id="monthFilter"><option value="all">All months</option></select></label>
+        <button class="reset-btn" id="resetFilters">Reset filters</button>
+        <div class="sidebar-note"><span class="status-dot"></span><div><b>Data refreshed</b><small>Portfolio dataset · 5,000 records</small></div></div>
+        <div class="sidebar-footer">Synthetic data for portfolio use<br />PostgreSQL · Power BI · Web Analytics</div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div><div class="eyebrow">OPERATIONS INTELLIGENCE</div><h1 id="pageTitle">Executive Overview</h1><p id="pageSubtitle">A clear view of service performance, customer experience and operational risk.</p></div>
+          <div class="top-actions"><span class="updated">Last updated <b id="updatedAt">—</b></span><button class="icon-btn" id="downloadCsv" title="Download filtered data">↓</button></div>
+        </header>
+
+        <nav class="tabs" aria-label="Dashboard pages">
+          <button class="tab active" data-page="executive">Executive Overview</button>
+          <button class="tab" data-page="agents">Agent Performance</button>
+          <button class="tab" data-page="topics">Topic Performance</button>
+          <button class="tab" data-page="customer">Customer Experience</button>
+          <button class="tab" data-page="operations">Operations</button>
+          <button class="tab" data-page="management">Management Actions</button>
+        </nav>
+
+        <section class="kpi-grid" id="kpis"></section>
+        <section class="dashboard-grid" id="dashboardGrid"></section>
+        <footer class="page-footer">Contact Center Operations Analytics · Built with PostgreSQL, Power BI concepts and vanilla JavaScript</footer>
+      </main>
+    </div>
+    <div class="toast" id="toast" role="status"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
