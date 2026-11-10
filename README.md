@@ -24,7 +24,7 @@ The project also includes a browser-based dashboard designed for GitHub Pages:
 
 > **Live web dashboard:** Enable GitHub Pages from the repository settings using the `main` branch and `/docs` folder, then open `https://zuhreyildiz.github.io/call-center-analytics/`.
 
-The web version includes the same decision-support flow as the Power BI report: Executive Overview, Agent Performance, Topic Performance, Customer Experience, Operations, and Management Actions. Team, Channel, and Month filters update the KPIs and charts, and filtered data can be downloaded as CSV.
+The web version includes the same decision-support flow as the Power BI report: Executive Overview, Agent Performance, Topic Performance, Customer Experience, Data Quality, Operations, and Management Actions. Team, Channel, and Month filters update the KPIs and charts, and filtered data can be downloaded as CSV.
 
 ## Key findings from the current dataset
 
